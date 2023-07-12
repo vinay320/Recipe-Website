@@ -9,7 +9,7 @@ export const Home = () => {
   const [savedRecipes, setSavedRecipes] = useState([]);
 
   const userID = useGetUserID();
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
   const [data, setData] = useState("");
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -34,6 +34,7 @@ export const Home = () => {
 
     fetchRecipes();
     fetchSavedRecipes();
+    // eslint-disable-next-line
   }, []);
 
   const saveRecipe = async (recipeID) => {

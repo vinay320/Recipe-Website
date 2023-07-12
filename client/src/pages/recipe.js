@@ -1,19 +1,19 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 
 export const Recipe = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const location = useLocation();
   console.log('location', location)
 
-  const redirectToHome = () => {
-    navigate("/");
-  };
+  // const redirectToHome = () => {
+  //   navigate("/");
+  // };
   
   return (
     <div  style={{display:"flex",justifyItems:"center",justifyContent:"space-around",gap:"300px",margin:"40px"}}>
     <div>
-        <img src={location.state.name.imageUrl} className="rounded-lg"/>
+        <img src={location.state.name.imageUrl} className="rounded-lg" alt="iamge_"/>
     </div>
     <div>
         <h1>{location.state.name.name}</h1>

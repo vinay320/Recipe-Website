@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
-import { Recipe } from "./recipe";
-import { Navigate, useNavigate } from "react-router-dom";
+// import { Recipe } from "./recipe";
+import {useNavigate } from "react-router-dom";
 export const SavedRecipes = () => {
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
   const [data,setData]=useState("");
   const [savedRecipes, setSavedRecipes] = useState([]);
   const userID = useGetUserID();
@@ -31,6 +31,7 @@ export const SavedRecipes = () => {
     };
 
     fetchSavedRecipes();
+    // eslint-disable-next-line
   }, []);
 
   const handleData =(id) => {      
